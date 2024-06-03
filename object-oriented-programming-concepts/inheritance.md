@@ -2,15 +2,15 @@
 
 Inheritance is a form of code reuse that allows programmers to develop new
 classes that are based on existing classes. The existing classes are often
-called _base classes_ or _superclasses_ , while the new classes are called
-_subclasses_ . A key advantage of inheritance is that it allows you to reuse
-code from a base class yet leave the existing code unmodified. Moreover,
-inheritance requires no changes to the way that other classes interact with the
-base class. Rather than modifying an existing class that may have been
-thoroughly tested or may already be in use, using inheritance you can treat that
-class as an integrated module that you can extend with additional properties or
-methods. Accordingly, you use the `extends` keyword to indicate that a class
-inherits from another class.
+called _base classes_ or _superclasses_, while the new classes are called
+_subclasses_. A key advantage of inheritance is that it allows you to reuse code
+from a base class yet leave the existing code unmodified. Moreover, inheritance
+requires no changes to the way that other classes interact with the base class.
+Rather than modifying an existing class that may have been thoroughly tested or
+may already be in use, using inheritance you can treat that class as an
+integrated module that you can extend with additional properties or methods.
+Accordingly, you use the `extends` keyword to indicate that a class inherits
+from another class.
 
 Inheritance also allows you to take advantage of _polymorphism_ in your code.
 Polymorphism is the ability to use a single method name for a method that
@@ -20,33 +20,33 @@ class defines a method named `area()`, which returns the area of the shape. If
 polymorphism is implemented, you can call the `area()` method on objects of type
 Circle and Square and have the correct calculations done for you. Inheritance
 enables polymorphism by allowing subclasses to inherit and redefine, or
-_override_ , methods from the base class. In the following example, the `area()`
+_override_, methods from the base class. In the following example, the `area()`
 method is redefined by the Circle and Square classes:
 
     class Shape
     {
-    public function area():Number
-    {
-        return NaN;
-    }
+        public function area():Number
+        {
+            return NaN;
+        }
     }
 
     class Circle extends Shape
     {
-    private var radius:Number = 1;
-    override public function area():Number
-    {
-        return (Math.PI * (radius * radius));
-    }
+        private var radius:Number = 1;
+        override public function area():Number
+        {
+            return (Math.PI * (radius * radius));
+        }
     }
 
     class Square extends Shape
     {
-    private var side:Number = 1;
-    override public function area():Number
-    {
-        return (side * side);
-    }
+        private var side:Number = 1;
+        override public function area():Number
+        {
+            return (side * side);
+        }
     }
 
     var cir:Circle = new Circle();
@@ -87,15 +87,15 @@ are inherited, an instance of any subclass can access these properties.
 
     public class Event
     {
-    public function get type():String;
-    public function get bubbles():Boolean;
-    ...
+        public function get type():String;
+        public function get bubbles():Boolean;
+        ...
 
-    public function stopPropagation():void {}
-    public function stopImmediatePropagation():void {}
-    public function preventDefault():void {}
-    public function isDefaultPrevented():Boolean {}
-    ...
+        public function stopPropagation():void {}
+        public function stopImmediatePropagation():void {}
+        public function preventDefault():void {}
+        public function isDefaultPrevented():Boolean {}
+        ...
     }
 
 Other types of events require unique properties not available in the Event
@@ -109,13 +109,13 @@ on the base class:
 
     public class MouseEvent extends Event
     {
-    public static const CLICK:String= "click";
-    public static const MOUSE_MOVE:String = "mouseMove";
-    ...
+        public static const CLICK:String= "click";
+        public static const MOUSE_MOVE:String = "mouseMove";
+        ...
 
-    public function get stageX():Number {}
-    public function get stageY():Number {}
-    ...
+        public function get stageX():Number {}
+        public function get stageY():Number {}
+        ...
     }
 
 #### Access control specifiers and inheritance
@@ -158,38 +158,38 @@ and runs as shown in the following excerpt:
     // Base.as in a folder named foo
     package foo
     {
-    public class Base
-    {
-        public var str:String = "hello"; // change public on this line
-    }
+        public class Base
+        {
+            public var str:String = "hello"; // change public on this line
+        }
     }
 
     // Extender.as in a folder named bar
     package bar
     {
-    import foo.Base;
-    public class Extender extends Base
-    {
-        public function getString():String {
-            return str;
+        import foo.Base;
+        public class Extender extends Base
+        {
+            public function getString():String {
+                return str;
+            }
         }
-    }
     }
 
     // main application class in file named AccessControl.as
     package
     {
-    import flash.display.MovieClip;
-    import bar.Extender;
-    public class AccessControl extends MovieClip
-    {
-        public function AccessControl()
+        import flash.display.MovieClip;
+        import bar.Extender;
+        public class AccessControl extends MovieClip
         {
-            var myExt:Extender = new Extender();
-            trace(myExt.str);// error if str is not public
-            trace(myExt.getString()); // error if str is private or internal
+            public function AccessControl()
+            {
+                var myExt:Extender = new Extender();
+                trace(myExt.str);// error if str is not public
+                trace(myExt.getString()); // error if str is private or internal
+            }
         }
-    }
     }
 
 To see how the other access control specifiers affect compilation and execution
@@ -259,29 +259,29 @@ call `Base.thanks()`.
 
     package {
     import flash.display.MovieClip;
-    public class SuperExample extends MovieClip
-    {
-        public function SuperExample()
+        public class SuperExample extends MovieClip
         {
-            var myExt:Extender = new Extender()
-            trace(myExt.thanks()); // output: Mahalo nui loa
+            public function SuperExample()
+            {
+                var myExt:Extender = new Extender()
+                trace(myExt.thanks()); // output: Mahalo nui loa
+            }
         }
-    }
     }
 
     class Base {
-    public function thanks():String
-    {
-        return "Mahalo";
-    }
+        public function thanks():String
+        {
+            return "Mahalo";
+        }
     }
 
     class Extender extends Base
     {
-    override public function thanks():String
-    {
-        return super.thanks() + " nui loa";
-    }
+        override public function thanks():String
+        {
+            return super.thanks() + " nui loa";
+        }
     }
 
 #### Overriding getters and setters
@@ -292,20 +292,20 @@ getters and setters. For example, the following code overrides a getter named
 
     package
     {
-    import flash.display.MovieClip;
-    public class OverrideExample extends MovieClip
-    {
-        public function OverrideExample()
+        import flash.display.MovieClip;
+        public class OverrideExample extends MovieClip
         {
-            trace(currentLabel)
+            public function OverrideExample()
+            {
+                trace(currentLabel)
+            }
+            override public function get currentLabel():String
+            {
+                var str:String = "Override: ";
+                str += super.currentLabel;
+                return str;
+            }
         }
-        override public function get currentLabel():String
-        {
-            var str:String = "Override: ";
-            str += super.currentLabel;
-            return str;
-        }
-    }
     }
 
 The output of the `trace()` statement in the OverrideExample class constructor
@@ -323,19 +323,19 @@ the Base class. The code as written in the following excerpt does not compile in
 strict mode and generates a run-time error in standard mode.
 
     package {
-    import flash.display.MovieClip;
-    public class StaticExample extends MovieClip
-    {
-        public function StaticExample()
+        import flash.display.MovieClip;
+        public class StaticExample extends MovieClip
         {
-            var myExt:Extender = new Extender();
-            trace(myExt.test);// error
+            public function StaticExample()
+            {
+                var myExt:Extender = new Extender();
+                trace(myExt.test);// error
+            }
         }
-    }
     }
 
     class Base {
-    public static var test:String = "static";
+        public static var test:String = "static";
     }
 
     class Extender extends Base { }
@@ -355,21 +355,21 @@ test instance variable is moved, but not copied, to the Extender class.
 
     package
     {
-    import flash.display.MovieClip;
-    public class StaticExample extends MovieClip
-    {
-        public function StaticExample()
+        import flash.display.MovieClip;
+        public class StaticExample extends MovieClip
         {
-            var myExt:Extender = new Extender();
-            trace(myExt.test);// output: instance
+            public function StaticExample()
+            {
+                var myExt:Extender = new Extender();
+                trace(myExt.test);// output: instance
+            }
         }
-    }
     }
 
     class Base
     {
-    public static var test:String = "static";
-    public var test:String = "instance";
+        public static var test:String = "static";
+        public var test:String = "instance";
     }
 
     class Extender extends Base {}
@@ -391,26 +391,26 @@ defines `test`.
 
     package
     {
-    import flash.display.MovieClip;
-    public class StaticExample extends MovieClip
-    {
-        public function StaticExample()
+        import flash.display.MovieClip;
+        public class StaticExample extends MovieClip
         {
-            var myExt:Extender = new Extender();
+            public function StaticExample()
+            {
+                var myExt:Extender = new Extender();
+            }
         }
-    }
     }
 
     class Base {
-    public static var test:String = "static";
+        public static var test:String = "static";
     }
 
     class Extender extends Base
     {
-    public function Extender()
-    {
-        trace(test); // output: static
-    }
+        public function Extender()
+        {
+            trace(test); // output: static
+        }
 
     }
 
@@ -425,27 +425,27 @@ static variable.:
 
     package
     {
-    import flash.display.MovieClip;
-    public class StaticExample extends MovieClip
-    {
-        public function StaticExample()
+        import flash.display.MovieClip;
+        public class StaticExample extends MovieClip
         {
-            var myExt:Extender = new Extender();
+            public function StaticExample()
+            {
+                var myExt:Extender = new Extender();
+            }
         }
-    }
     }
 
     class Base
     {
-    public static var test:String = "static";
+        public static var test:String = "static";
     }
 
     class Extender extends Base
     {
-    public var test:String = "instance";
-    public function Extender()
-    {
-        trace(test); // output: instance
-    }
+        public var test:String = "instance";
+        public function Extender()
+        {
+            trace(test); // output: instance
+        }
 
     }

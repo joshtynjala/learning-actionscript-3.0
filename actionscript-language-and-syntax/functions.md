@@ -410,12 +410,8 @@ aspects of the `arguments` object include the following:
 - The `arguments.callee` property provides a reference to the function itself,
   which is useful for recursive calls to function expressions.
 
-  <div>
-
-  Note: The `arguments` object is not available if any parameter is named
-  `arguments` or if you use the ... (rest) parameter.
-
-  </div>
+  > **Note:** The `arguments` object is not available if any parameter is named
+  > `arguments` or if you use the ... (rest) parameter.
 
   If the `arguments` object is referenced in the body of a function,
   ActionScript 3.0 allows function calls to include more parameters than those

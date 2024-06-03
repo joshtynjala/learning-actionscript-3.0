@@ -56,8 +56,8 @@ class, as follows:
     // child class
     function Circle(id, radius)
     {
-    this.id = id;
-    this.radius = radius;
+        this.id = id;
+        this.radius = radius;
     }
 
 Second, use the `new` operator to declare that the Shape class is the prototype
@@ -132,7 +132,7 @@ allows you to define classes in a way that many programmers find more intuitive:
     // base class
     class Shape
     {
-    var visible:Boolean = true;
+        var visible:Boolean = true;
     }
 
 Note that ActionScript 2.0 also introduced type annotations for use with

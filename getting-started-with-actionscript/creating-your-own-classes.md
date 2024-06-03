@@ -66,7 +66,7 @@ Nevertheless, here are a few suggested approaches that can help you get started.
     functionality.) For example, to create a class that is a visual object on
     the screen, use the behavior of an existing display object as a basis for
     your class. In that case, the display object (such as MovieClip or Sprite)
-    would be the _base class_ , and your class would extend that class.
+    would be the _base class_, and your class would extend that class.
 
 ## Writing the code for a class
 
@@ -98,9 +98,9 @@ Here are the minimum steps to create your own ActionScript class:
 
         package mypackage
         {
-        public class MyClass
-        {
-        }
+          public class MyClass
+          {
+          }
         }
 
 4.  Define each property in the class using the `var` statement within the class
@@ -120,7 +120,7 @@ Here are the minimum steps to create your own ActionScript class:
 
           public function myMethod(param1:String, param2:Number):void
           {
-          // do something with parameters
+              // do something with parameters
           }
 
     - To create a constructor (the special method that is called as part of the
@@ -129,10 +129,10 @@ Here are the minimum steps to create your own ActionScript class:
 
           public function MyClass()
           {
-          // do stuff to set initial values for properties
-          // and otherwise set up the object
-          textVariable = "Hello there!";
-          dateVariable = new Date(2001, 5, 11);
+              // do stuff to set initial values for properties
+              // and otherwise set up the object
+              textVariable = "Hello there!";
+              dateVariable = new Date(2001, 5, 11);
           }
 
       If you don’t include a constructor method in your class, the compiler

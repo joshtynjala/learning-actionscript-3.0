@@ -298,7 +298,7 @@ with any of the access control attributes ( `public`, `private`, `protected`,
 Variables can be declared with either the `var` or `const` keywords. Variables
 declared with the `var` keyword can have their values changed multiple times
 throughout the execution of a script. Variables declared with the `const`
-keyword are called _constants_ , and can have values assigned to them only once.
+keyword are called _constants_, and can have values assigned to them only once.
 An attempt to assign a new value to an initialized constant results in an error.
 
 #### Static variables
@@ -404,7 +404,7 @@ attach a function to the prototype object.
 
 ### Constructor methods
 
-Constructor methods, sometimes called _constructors_ , are functions that share
+Constructor methods, sometimes called _constructors_, are functions that share
 the same name as the class in which they are defined. Any code that you include
 in a constructor method is executed whenever an instance of the class is created
 with the `new` keyword. For example, the following code defines a simple class
@@ -469,7 +469,7 @@ generates.
 
 ### Static methods
 
-Static methods, also called _class methods_ , are methods that are declared with
+Static methods, also called _class methods_, are methods that are declared with
 the `static` keyword. Static methods, which are attached to a class rather than
 to an instance of a class, are useful for encapsulating functionality that
 affects something other than the state of an individual instance. Because static
@@ -574,7 +574,7 @@ method.
 
 ### Get and set accessor methods
 
-Get and set accessor functions, also called _getters_ and _setters_ , allow you
+Get and set accessor functions, also called _getters_ and _setters_, allow you
 to adhere to the programming principles of information hiding and encapsulation
 while providing an easy-to-use programming interface for the classes that you
 create. Get and set functions allow you to keep your class properties private to
@@ -633,7 +633,7 @@ that are inherited from a superclass.
 
 ### Bound methods
 
-A bound method, sometimes called a _method closure_ , is simply a method that is
+A bound method, sometimes called a _method closure_, is simply a method that is
 extracted from its instance. Examples of bound methods include methods that are
 passed as arguments to a function or returned as values from a function. New in
 ActionScript 3.0, a bound method is similar to a function closure in that it
@@ -809,7 +809,7 @@ representation of the day.
 
 ## Embedded asset classes
 
-ActionScript 3.0 uses special classes, called _embedded asset classes_ , to
+ActionScript 3.0 uses special classes, called _embedded asset classes_, to
 represent embedded assets. An _embedded asset_ is an asset, such as a sound,
 image, or font, that is included in a SWF file at compile time. Embedding an
 asset instead of loading it dynamically ensures that it is available at run

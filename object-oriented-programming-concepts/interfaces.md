@@ -9,14 +9,14 @@ code shows the definition of the IEventDispatcher interface:
 
     public interface IEventDispatcher
     {
-    function addEventListener(type:String, listener:Function,
-            useCapture:Boolean=false, priority:int=0,
-            useWeakReference:Boolean = false):void;
-    function removeEventListener(type:String, listener:Function,
-            useCapture:Boolean=false):void;
-    function dispatchEvent(event:Event):Boolean;
-    function hasEventListener(type:String):Boolean;
-    function willTrigger(type:String):Boolean;
+        function addEventListener(type:String, listener:Function,
+                useCapture:Boolean=false, priority:int=0,
+                useWeakReference:Boolean = false):void;
+        function removeEventListener(type:String, listener:Function,
+                useCapture:Boolean=false):void;
+        function dispatchEvent(event:Event):Boolean;
+        function hasEventListener(type:String):Boolean;
+        function willTrigger(type:String):Boolean;
     }
 
 Interfaces are based on the distinction between a method’s interface and its
@@ -35,12 +35,12 @@ EventDispatcher class definition:
 
     public class EventDispatcher implements IEventDispatcher
     {
-    function dispatchEvent(event:Event):Boolean
-    {
-        /* implementation statements */
-    }
+        function dispatchEvent(event:Event):Boolean
+        {
+            /* implementation statements */
+        }
 
-    ...
+        ...
     }
 
 The IEventDispatcher interface serves as a protocol that EventDispatcher
@@ -68,8 +68,8 @@ for storage on a device or for transport across a network.
 
     public interface IExternalizable
     {
-    function writeExternal(output:IDataOutput):void;
-    function readExternal(input:IDataInput):void;
+        function writeExternal(output:IDataOutput):void;
+        function readExternal(input:IDataInput):void;
     }
 
 The IExternalizable interface is declared with the `public` access control
@@ -88,7 +88,7 @@ interface, IExample, extends the IExternalizable interface:
 
     public interface IExample extends IExternalizable
     {
-    function extra():void;
+        function extra():void;
     }
 
 Any class that implements the IExample interface must include implementations
@@ -104,18 +104,18 @@ IBeta `,` and a class, Alpha, that implements them both:
 
     interface IAlpha
     {
-    function foo(str:String):String;
+        function foo(str:String):String;
     }
 
     interface IBeta
     {
-    function bar():void;
+        function bar():void;
     }
 
     class Alpha implements IAlpha, IBeta
     {
-    public function foo(param:String):String {}
-    public function bar():void {}
+        public function foo(param:String):String {}
+        public function bar():void {}
     }
 
 In a class that implements an interface, implemented methods must do the
@@ -152,7 +152,7 @@ parameter value of 3:
 
     interface IGamma
     {
-    function doSomething(param:int = 3):void;
+        function doSomething(param:int = 3):void;
     }
 
 The following class definition implements the IGamma interface but uses a
@@ -160,7 +160,7 @@ different default parameter value:
 
     class Gamma implements IGamma
     {
-    public function doSomething(param:int = 4):void {}
+        public function doSomething(param:int = 4):void {}
     }
 
 The reason for this flexibility is that the rules for implementing an interface
