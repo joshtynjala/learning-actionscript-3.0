@@ -213,13 +213,14 @@ this conflict, you must use the fully qualified name of each class, as follows:
     var sample1:samples.SampleCode = new samples.SampleCode();
     var sample2:langref.samples.SampleCode = new langref.samples.SampleCode();
 
-Note: Programmers with a C++ background often confuse the `import` statement
-with `#include`. The `#include` directive is necessary in C++ because C++
-compilers process one file at a time, and don’t look in other files for class
-definitions unless a header file is explicitly included. ActionScript 3.0 has an
-`include` directive, but it is not designed to import classes and packages. To
-import classes or packages in ActionScript 3.0, you must use the `import`
-statement and place the source file that contains the package in the class path.
+> **Note:** Programmers with a C++ background often confuse the `import`
+> statement with `#include`. The `#include` directive is necessary in C++
+> because C++ compilers process one file at a time, and don’t look in other
+> files for class definitions unless a header file is explicitly included.
+> ActionScript 3.0 has an `include` directive, but it is not designed to import
+> classes and packages. To import classes or packages in ActionScript 3.0, you
+> must use the `import` statement and place the source file that contains the
+> package in the class path.
 
 ## Namespaces
 

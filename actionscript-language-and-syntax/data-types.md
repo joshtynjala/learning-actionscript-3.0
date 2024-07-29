@@ -12,11 +12,12 @@ Boolean, int, Number, String, and uint. Working with primitive values is usually
 faster than working with complex values, because ActionScript stores primitive
 values in a special way that makes memory and speed optimizations possible.
 
-Note: For readers interested in the technical details, ActionScript stores
-primitive values internally as immutable objects. The fact that they are stored
-as immutable objects means that passing by reference is effectively the same as
-passing by value. This cuts down on memory usage and increases execution speed,
-because references are usually significantly smaller than the values themselves.
+> **Note:** For readers interested in the technical details, ActionScript stores
+> primitive values internally as immutable objects. The fact that they are
+> stored as immutable objects means that passing by reference is effectively the
+> same as passing by value. This cuts down on memory usage and increases
+> execution speed, because references are usually significantly smaller than the
+> values themselves.
 
 A _complex value_ is a value that is not a primitive value. Data types that
 define sets of complex values include Array, Date, Error, Function, RegExp, XML,
@@ -420,9 +421,9 @@ but does not. For example, if you attempt to calculate the square root of a
 negative number, the result is `NaN`. Other special Number values include
 _positive infinity_ and _negative infinity_`.`
 
-Note: The result of division by `0` is only `NaN` if the divisor is also `0`.
-Division by `0` produces `infinity` when the dividend is positive or `-infinity`
-when the dividend is negative.
+> **Note:** The result of division by `0` is only `NaN` if the divisor is also
+> `0`. Division by `0` produces `infinity` when the dividend is positive or
+> `-infinity` when the dividend is negative.
 
 ### String data type
 

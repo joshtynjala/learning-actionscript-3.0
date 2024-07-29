@@ -21,11 +21,11 @@ For developers who have created classes in programming languages like Java, C++,
 or C#, ActionScript provides a familiar experience. ActionScript shares many of
 the same keywords and attribute names, such as `class`, `extends`, and `public`.
 
-Note: In the Adobe ActionScript documentation, the term property means any
-member of an object or class, including variables, constants, and methods. In
-addition, although the terms class and static are often used interchangeably,
-here these terms are distinct. For example, the phrase “class properties” is
-used to mean all the members of a class, rather than only the static members.
+> **Note:** In the Adobe ActionScript documentation, the term property means any
+> member of an object or class, including variables, constants, and methods. In
+> addition, although the terms class and static are often used interchangeably,
+> here these terms are distinct. For example, the phrase “class properties” is
+> used to mean all the members of a class, rather than only the static members.
 
 ## Class definitions
 

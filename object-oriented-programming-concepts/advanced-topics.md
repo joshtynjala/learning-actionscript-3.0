@@ -216,9 +216,9 @@ fixed properties defined in the class. As a result, an object that required 100
 bytes of memory in ActionScript 2.0 could require as little as 20 bytes of
 memory in ActionScript 3.0.
 
-Note: The traits object is an internal implementation detail, and there is no
-guarantee that it will not change or even disappear in future versions of
-ActionScript.
+> **Note:** The traits object is an internal implementation detail, and there is
+> no guarantee that it will not change or even disappear in future versions of
+> ActionScript.
 
 ## The prototype object
 

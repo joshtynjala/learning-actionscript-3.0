@@ -55,10 +55,10 @@ the same code in another Flex project. To make it easier to use your
 ActionScript code in other Flex projects in the future, store your code in
 external ActionScript files.
 
-Note: You can specify a source parameter for an `<fx:Script>` tag. Using a
-source parameter lets you “import” ActionScript code from an external file as if
-it was typed directly within the `<fx:Script>` tag. However, the source file
-that you use cannot define its own class, which limits its reusability.
+> **Note:** You can specify a source parameter for an `<fx:Script>` tag. Using a
+> source parameter lets you “import” ActionScript code from an external file as
+> if it was typed directly within the `<fx:Script>` tag. However, the source
+> file that you use cannot define its own class, which limits its reusability.
 
 #### Storing code in ActionScript files
 
